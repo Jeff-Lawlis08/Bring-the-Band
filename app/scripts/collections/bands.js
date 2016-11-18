@@ -2,9 +2,11 @@ import Backbone from 'backbone';
 import Band from '../models/band';
 import config from '../config';
 import $ from 'jquery';
+import {hashHistory} from 'react-router';
 
 export default Backbone.Collection.extend({
   model: Band,
+  url: 'https://api.backendless.com/v1/data/bands',
 
   getBands(artist){
   $.ajax({
@@ -14,7 +16,6 @@ export default Backbone.Collection.extend({
       type: 'artist'
     },
     success: (response)=>{
-      // console.log(response);
       this.add(response);
     },
   });
@@ -28,8 +29,22 @@ addVotes({name, photo, votes}){
       'Content-Type':'application/json',
       'application-type': 'REST'
     },
-    url: 'https://api.backendless.com/v1/data/bands'
+    url: 'https://api.backendless.com/v1/data/bands',
+    success: ()=>{
+      hashHistory.push('/votes');
+    }
   });
-}
+},
+// getVoted(){
+//   $.ajax(
+//     {
+//     url: 'https://api.backendless.com/v1/data/bands',
+//     success: ()=>{
+//       console.log(response);
+//       this.add(response);
+//     }
+//     }
+//   );
+// }
 
 });

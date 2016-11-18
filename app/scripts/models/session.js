@@ -14,7 +14,7 @@ signup(username, email, password){
       'application-id': config.appId,
       'secret-key': config.secret,
       'Content-Type':'application/json',
-      'application-type': REST
+      'application-type': 'REST'
     },
       url: 'https://api.backendless.com/v1/users/register',
     success: () => {
@@ -30,7 +30,7 @@ login(login, password){
         'application-id': config.appId,
         'secret-key': config.secret,
         'Content-Type':'application/json',
-        'application-type': REST
+        'application-type': 'REST'
       },
       url: 'https://api.backendless.com/v1/users/login',
       success: () => {

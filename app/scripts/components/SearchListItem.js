@@ -24,5 +24,6 @@ export default React.createClass({
   },
   handleClick(){
     store.bands.addVotes({name: this.props.band.name, photo: this.props.band.images[0].url, votes: 1});
+  
   }
 });
