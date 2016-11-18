@@ -16,6 +16,4 @@ describe('session model', ()=>{
   it('should create a backbone model', ()=>{
     expect(session).to.be.an.instanceof(Backbone.Model);
   });
-//   it('should have a default username of an empty string');
-//   expect(session.get('username')).to.equal('');
-// });
+});

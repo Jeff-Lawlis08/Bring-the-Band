@@ -7,7 +7,7 @@ import $ from 'jquery';
 import session from './store';
 import Login from './components/Login';
 import Signup from './components/Signup';
-// import Search from './components/Search';
+import Search from './components/Search';
 // import Votes from './components/Votes';
 $(document).ajaxSend((e, xhr, opts) => {
   console.log('intercepted ajax request');
@@ -21,10 +21,11 @@ const router = (
 <Router history={hashHistory}>
   <Route path='/' component={Login}/>
   <Route path='/signup' component={Signup}/>
+  <Route path='/search' component={Search}/>
 </Router>
 );
 
-// <Route path='/search' component={Search}/>
+
 // <Route path='/votes' component={Votes}/>
 
 export default router;
