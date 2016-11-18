@@ -5,7 +5,7 @@ export default React.createClass({
   render(){
     console.log(this.props.bands);
     let allBands = this.props.bands.map((band, i, arr)=>{
-      console.log(band.name);
+      // console.log(band.name);
       return (
         <SearchListItem key={i} band={band}/>
       );
