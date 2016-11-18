@@ -14,14 +14,14 @@ export default React.createClass({
     });
   },
   render(){
-    console.log(this.state);
+    // console.log(this.state);
     return (
       <div>
-        <form className="signup-form">
+        <form className="signup-form" onSubmit={this.handleSubmit}>
           <input className="username" type="text" placeholder="Username"/>
           <input className="email" type="email" placeholder="Email"/>
           <input className="password" type="password" placeholder="Password"/>
-          <input onClick={this.handleSubmit} type="submit" value="submit"/>
+          <input type="submit" value="submit"/>
         </form>
         Already a Member? <Link to="/">Login Here!</Link>
       </div>
