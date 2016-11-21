@@ -20,16 +20,7 @@ export default Backbone.Collection.extend({
     },
   });
 },
-addVotes({name, photo, votes}){
-  this.create(
-    {name, photo, votes},
-    {
-    url: 'https://api.backendless.com/v1/data/bands',
-    success: ()=>{
-      hashHistory.push('/votes');
-    }
-  });
-},
+
 // getVoted(){
 //   $.ajax(
 //     {
