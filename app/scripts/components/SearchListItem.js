@@ -15,7 +15,7 @@ export default React.createClass({
   } else {
     return (
       <li className="search-item">
-        <img src='http://www.bandofhorses.com/wp-content/uploads/2013/12/bohbanner-1440x900.jpg'/>
+        <img src='https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQIWFzcaKyw2EGkjt2_rjzIMV1WX7An2zvhWb075Z8mMaeWOz8R-Q'/>
         <span>{this.props.band.name}</span>
         <input onClick={this.handleClick} type="button" value="vote"/>
       </li>

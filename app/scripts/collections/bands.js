@@ -6,7 +6,6 @@ import {hashHistory} from 'react-router';
 
 export default Backbone.Collection.extend({
   model: Band,
-  url: 'https://api.backendless.com/v1/data/bands',
 
   getBands(artist){
   $.ajax({
@@ -16,6 +15,7 @@ export default Backbone.Collection.extend({
       type: 'artist'
     },
     success: (response)=>{
+      this.reset();
       this.add(response);
     },
   });
@@ -23,12 +23,7 @@ export default Backbone.Collection.extend({
 addVotes({name, photo, votes}){
   this.create(
     {name, photo, votes},
-    {headers: {
-      'application-id': config.appId,
-      'secret-key': config.secret,
-      'Content-Type':'application/json',
-      'application-type': 'REST'
-    },
+    {
     url: 'https://api.backendless.com/v1/data/bands',
     success: ()=>{
       hashHistory.push('/votes');

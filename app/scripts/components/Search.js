@@ -18,7 +18,6 @@ export default React.createClass({
     // console.log(this.state.bands[0].artists.items);
     return (
       <div>
-        <Nav/>
         <form className="search-form" onSubmit={this.handleSubmit}>
           <input id="search" type="text" placeholder="Search Artists..."/>
           <input type="submit" value="SEARCH"/>
