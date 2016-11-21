@@ -9,7 +9,7 @@ export default React.createClass({
       <li className="search-item">
         <img src={this.props.band.images[0].url}/>
         <span>{this.props.band.name}</span>
-        <input onClick={this.handleClick} type="button" value="vote"/>
+        <input onClick={this.handleClick} type="button" value="VOTE"/>
       </li>
     );
   } else {
@@ -24,6 +24,6 @@ export default React.createClass({
   },
   handleClick(){
     store.bands.addVotes({name: this.props.band.name, photo: this.props.band.images[0].url, votes: 1});
-  
+
   }
 });

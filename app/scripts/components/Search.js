@@ -20,8 +20,8 @@ export default React.createClass({
       <div>
         <Nav/>
         <form className="search-form" onSubmit={this.handleSubmit}>
-          <input id="search" type="text" placeholder="search"/>
-          <input type="submit" value="search"/>
+          <input id="search" type="text" placeholder="Search Artists..."/>
+          <input type="submit" value="SEARCH"/>
         </form>
         <SearchList bands={this.state.bands[0].artists.items}/>
       </div>

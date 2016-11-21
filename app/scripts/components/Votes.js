@@ -25,12 +25,22 @@ export default React.createClass({
     },
 
   render(){
-    console.log(this.state);
-    let allBands = this.state.bands.map((band, i, arr)=>{
-      <VoteItems band={band}/>
+    let bands = this.state.bands.map((band, i, arr)=>{
+      return band.data;
+    })
+    let allBands = bands.map((band, i, arr)=>{
+      return band.map((band, i, arr)=>{
+        return (
+          <li>
+          <img src={band.photo}/>
+          <div>
+            <span>{band.name}</span>
+            <span>Votes: {band.votes}</span>
+          </div>
+          </li>
+        );
+      });
     });
-    // console.log(this.state);
-
     return (
       <ul className="voted-bands">
         {allBands}
