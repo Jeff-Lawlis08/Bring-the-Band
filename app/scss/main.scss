@@ -18,6 +18,42 @@ nav {
     }
   }
 }
+.login {
+    margin-top: 14rem;
+    text-align: center;
+  form {
+    input {
+      display: block;
+      margin: 0 auto;
+    &:nth-of-type(3){
+      font-family: 'Open Sans', sans-serif;
+      background-color: #FEE763;
+    }
+  }
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
+.signup {
+  margin-top: 14rem;
+  text-align: center;
+form {
+  input {
+    display: block;
+    margin: 0 auto;
+  &:nth-of-type(4){
+    font-family: 'Open Sans', sans-serif;
+    background-color: #FEE763;
+  }
+}
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+}
 .search-form {
   text-align: center;
   margin-top: 1rem;

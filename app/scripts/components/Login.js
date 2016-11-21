@@ -16,7 +16,7 @@ export default React.createClass({
   render(){
     console.log('hello');
       return (
-        <div>
+        <div className="login">
           <form>
             <input className="email-login" type="email" placeholder="Email"/>
             <input className="password-login" type="password" placeholder="Password"/>

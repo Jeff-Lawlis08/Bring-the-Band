@@ -16,7 +16,7 @@ export default React.createClass({
   render(){
     // console.log(this.state);
     return (
-      <div>
+      <div className="signup">
         <form className="signup-form" onSubmit={this.handleSubmit}>
           <input className="username" type="text" placeholder="Username"/>
           <input className="email" type="email" placeholder="Email"/>
