@@ -10,7 +10,7 @@ export default Backbone.Collection.extend({
   parse(data){
     return data.data;
   },
-  addVotes({name, photo}){
+  addVotes({name, photo, votes}){
       this.fetch({success:()=>{
           let band = this.findWhere({name: name});
       if(band){
@@ -22,7 +22,7 @@ export default Backbone.Collection.extend({
           });
       } else {
       this.create(
-        {name, photo, votes},
+        {name, photo, votes:1},
         {
         success: ()=>{
           hashHistory.push('/votes');
@@ -31,7 +31,5 @@ export default Backbone.Collection.extend({
       }
     }
     });
-
-
   },
 });

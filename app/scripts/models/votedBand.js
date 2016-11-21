@@ -5,5 +5,5 @@ export default Backbone.Model.extend({
   idAttribute: 'objectId',
   name: '',
   photo: '',
-  votes: ''
+  votes: 0
 });
