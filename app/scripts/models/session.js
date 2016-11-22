@@ -9,6 +9,7 @@ export default Backbone.Model.extend({
       this.set({'user-token': window.localStorage.getItem('user-token')});
     }
   },
+  idAttribute: 'objectId',
   defaults: {
     username: '',
     email: '',

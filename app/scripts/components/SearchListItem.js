@@ -17,13 +17,12 @@ export default React.createClass({
       <li className="search-item">
         <img src='https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQIWFzcaKyw2EGkjt2_rjzIMV1WX7An2zvhWb075Z8mMaeWOz8R-Q'/>
         <span>{this.props.band.name}</span>
-        <input onClick={this.handleClick} type="button" value="vote"/>
+        <input onClick={this.handleClick} type="button" value="VOTE"/>
       </li>
     )
   }
   },
   handleClick(){
     store.votedBands.addVotes({name: this.props.band.name, photo: this.props.band.images[0].url});
-
   }
 });

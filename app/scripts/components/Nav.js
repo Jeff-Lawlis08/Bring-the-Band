@@ -17,6 +17,7 @@ export default React.createClass({
       <nav>
         <Link to="/login">Login</Link>
         <Link to="/signup">Signup</Link>
+        <Link to="/votes">See Current Votes</Link>
       </nav>
     );
   }
