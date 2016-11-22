@@ -21,9 +21,9 @@ export default React.createClass({
           <input className="username" ref="username" type="text" placeholder="Username"/>
           <input className="email" ref="email" type="email" placeholder="Email"/>
           <input className="password" ref="password" type="password" placeholder="Password"/>
-          <input type="submit" value="submit"/>
+          <input type="submit" value="Submit"/>
         </form>
-        Already a Member? <Link to="/">Login Here!</Link>
+        Already a Member? <Link to="/login">Login Here!</Link>
       </div>
     );
   },

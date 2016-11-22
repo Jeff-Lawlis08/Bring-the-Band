@@ -10,17 +10,18 @@ export default React.createClass({
     }
   },
   componentDidMount(){
-    store.bands.on('update change', ()=>{
-      this.setState({bands: store.bands.toJSON()})
-    });
+    store.bands.on('update change', this.updateState);
+  },
+  componentWillUnmount(){
+    store.bands.on('update change', this.updateState);
   },
   render(){
     // console.log(this.state.bands[0].artists.items);
     return (
       <div>
         <form className="search-form" onSubmit={this.handleSubmit}>
-          <input id="search" type="text" placeholder="Search Artists..."/>
-          <input type="submit" value="SEARCH"/>
+          <input id="search" ref="search" type="text" placeholder="Search Artists..."/>
+          <i onClick={this.handleSubmit} className="fa fa-search" aria-hidden="true"></i>
         </form>
         <SearchList bands={this.state.bands[0].artists.items}/>
       </div>
@@ -29,7 +30,10 @@ export default React.createClass({
   handleSubmit(e){
     e.preventDefault();
     // console.log(this.state);
-    let artist = document.getElementById('search').value;
+    let artist = this.refs.search.value;
     store.bands.getBands(artist);
+  },
+  updateState(){
+    this.setState({bands: store.bands.toJSON()})
   }
 });
